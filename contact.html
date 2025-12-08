@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+
+    <style>
+    html, body {
+        height: 100%; 
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/final-logo.png" alt="Janry's Logo">
+        </div>
+
+        <button class="Menu-Button" id="menuBtn" onclick="Menu()">☰</button>
+        <ul class="top-nav" id="topnav">
+            <li><a href="homepage.html" >Home</a></li>
+            <li><a href="portfolio.html" >Portfolio</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const topnav = document.getElementById("topnav");
+
+        function Menu() {
+            topnav.classList.toggle("show");
+
+            if (topnav.classList.contains("show")) {
+                menuBtn.textContent = "✖"
+            } else {
+                menuBtn.textContent = "☰"; 
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            if (!menuBtn.contains(event.target) && !topnav.contains(event.target)) {
+                if (topnav.classList.contains("show")) {
+                    topnav.classList.remove("show");
+                    menuBtn.textContent = "☰";
+                }
+            }
+        });
+
+        
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".top-nav a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <main>
+        <section class="contact-page">
+            <div class="contact-container">
+
+                <h2>Get in Touch with Me</h2>
+                <p>Feel free to reach out anytime.</p>
+
+                <hr class="line">
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:concepcionjanry09@gmail.com">concepcionjanry09@gmail.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:09708258156">0970 825 8156</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Janry Concepcion. All Rights Reserved.</p>
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.linkedin.com/in/janry-concepcion-b016b0314/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/parkdyanree" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/park_dyanree/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>

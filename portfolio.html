@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/final-logo.png" alt="Janry's Logo">
+        </div>
+
+        <button class="Menu-Button" id="menuBtn" onclick="Menu()">☰</button>
+        <ul class="top-nav" id="topnav">
+            <li><a href="homepage.html" >Home</a></li>
+            <li><a href="portfolio.html" >Portfolio</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const topnav = document.getElementById("topnav");
+
+        function Menu() {
+            topnav.classList.toggle("show");
+
+            if (topnav.classList.contains("show")) {
+                menuBtn.textContent = "✖"
+            } else {
+                menuBtn.textContent = "☰"; 
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            if (!menuBtn.contains(event.target) && !topnav.contains(event.target)) {
+                if (topnav.classList.contains("show")) {
+                    topnav.classList.remove("show");
+                    menuBtn.textContent = "☰";
+                }
+            }
+        });
+
+        
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".top-nav a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+<main>
+     <section class="my-portfolio">
+        <h2>UI/UX Design</h2>
+        <div class="portfolio-container">
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project1">
+
+                <div class="portfolio-text">
+                    <h3>Capstone Project – Centralized Record Management System</h3>
+
+                    <p>A web-based system designed to digitize barangay operations—complaint records, certificate issuance, residents’ information, and demographic insights.</p>
+                    <p><strong>Role</strong>: System Designer / UI-UX Designer</p>
+                    <p><strong>Year</strong>: 2025</p>
+
+                    <a href="https://www.figma.com/proto/BL7nqAOW4l1yEcsLF1BSU0/SEC-Admin-?node-id=211-321&p=f&t=71O6C1U839tjDopM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=211%3A321" class="top-btn" target="_blank">
+                        <span>View Prototype</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project2">
+
+                <div class="portfolio-text">
+                    <h3>Water Refilling Station App</h3>
+
+                    <p>
+                        A mobile ordering and delivery app for clean drinking water.
+                        This school project is a user-friendly mobile application designed for a local water refilling station.
+                    </p>
+    
+                    <p><strong>Role</strong>: System Designer / UI-UX Designer</p>
+                    <p><strong>Year</strong>: 2024-2025</p>
+                    <a href="#" class="top-btn"> 
+                        <span>View Prototype</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project3">
+
+                <div class="portfolio-text">
+                    <h3>iPhone E-Commerce UI</h3>
+
+                    <p>
+                        A modern and intuitive e-commerce mobile interface designed for iOS users.
+                    </p>
+    
+                    <p><strong>Role</strong>: System Designer / UI-UX Designer</p>
+                    <p><strong>Year</strong>: 2024-2025</p>
+                    <a href="#" class="top-btn"> 
+                        <span>View Prototype</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project4">
+
+                <div  class="portfolio-text">
+                    <h3>Explore Switzerland</h3>
+
+                    <p>
+                        A clean and immersive landing page designed to highlight Switzerland’s breathtaking landscapes and inspire travelers through intuitive navigation.
+                    </p>
+    
+                    <p><strong>Role</strong>: System Designer / UI-UX Designer</p>
+                    <p><strong>Year</strong>: 2024-2025</p>
+                    <a href="#" class="top-btn">
+                        <span>View Prototype</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <h2>Web Design</h2>
+        <div class="portfolio-container">
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project5">
+
+                <div class="portfolio-text">
+                    <h3>Student Enrollment Form Design</h3>
+
+                    <p>A responsive and easy-to-use enrollment page created using HTML and CSS, designed to simplify and organize the student registration process.</p>
+                    <p><strong>Role</strong>: Web Designer</p>
+                    <p><strong>Year</strong>: 2025</p>
+
+                    <a href="https://www.figma.com/proto/BL7nqAOW4l1yEcsLF1BSU0/SEC-Admin-?node-id=211-321&p=f&t=71O6C1U839tjDopM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=211%3A321" class="top-btn" target="_blank">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project6">
+
+                <div class="portfolio-text">
+                    <h3>K-Pop Fan Page</h3>
+
+                    <p>
+                        A school project website presenting BTS and SEVENTEEN images in a simple two columns, created to practice HTML and CSS layout techniques.
+                    </p>
+    
+                    <p><strong>Role</strong>: Web Designer</p>
+                    <p><strong>Year</strong>: 2025</p>
+                    <a href="#" class="top-btn"> 
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project7">
+
+                <div class="portfolio-text">
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        A personal website created as a final project, showcasing my design, photo, and video editing skills, along with other creative works, in a clean and organized layout.
+                    </p>
+    
+                    <p><strong>Role</strong>: Web Designer</p>
+                    <p><strong>Year</strong>: 2025</p>
+                    <a href="#" class="top-btn"> 
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <img src="img/banner2.jpg" alt="Project8">
+
+                <div  class="portfolio-text">
+                    <h3>Women with Baskets</h3>
+
+                    <p>A school project where I recreated Anita Magsaysay-Ho’s “Women with Baskets” using HTML and CSS by assembling separate images to display the full artwork on a web page.</p>
+    
+                    <p><strong>Role</strong>: Web Designer</p>
+                    <p><strong>Year</strong>: 2025</p>
+                    <a href="#" class="top-btn">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+         
+</main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Janry Concepcion. All Rights Reserved.</p>
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.linkedin.com/in/janry-concepcion-b016b0314/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/parkdyanree" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/park_dyanree/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
