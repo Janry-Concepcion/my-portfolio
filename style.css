@@ -319,7 +319,7 @@ main {
 }
 .about-btn {
   text-align: left; 
-  margin-top: 20px; 
+  margin-top: 30px; 
 }
 @media (max-width: 1024px) {
     .about-text {
@@ -342,9 +342,9 @@ main {
         max-width: 100%;
         text-align: left;
     }
-    .about-text h2{
+    /* .about-text h2{
         text-align: center;
-    }
+    } */
 }
 @media (max-width: 500px) {
     .about-content {
