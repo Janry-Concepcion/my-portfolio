@@ -327,7 +327,7 @@ main {
     }
 }
 @media (max-width: 768px) {
-    .about-content {
+    .about-container {
         flex-direction: column;
         text-align: center;
     }
@@ -347,7 +347,7 @@ main {
     } */
 }
 @media (max-width: 500px) {
-    .about-content {
+    .about-container {
         flex-direction: column;
         text-align: center;
     }
