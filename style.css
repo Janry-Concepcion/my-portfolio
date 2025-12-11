@@ -1119,4 +1119,13 @@ ul {
      width: 85%;
      padding: 35px 25px;
     }
+    .contact-item i {
+    font-size: 18px;
+    color: #d81159; 
+    }
+    .contact-item a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    }
 }
