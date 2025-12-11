@@ -199,7 +199,7 @@ main {
 }
 @media (max-width: 1024px) {
     .hero-section {
-        height: 650px;
+        height: 668px;
     }
 
     .hero-section h1 {
@@ -214,7 +214,7 @@ main {
 @media (max-width: 600px) {
     .hero-section {
         width: 100%;
-        height: 650px;
+        height: 668px;
     }
     .btn-filled, .work-btn {
         padding: 8px 15px;
@@ -247,21 +247,20 @@ main {
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 55px;
     justify-content: center;
 }
 .about-Me h2 {
     margin-top: 78px;
     font-size: 32px;
     color: black;
-    margin-bottom: 25px;
+    margin-bottom: 4px;
     text-align: center;
 
 }
 .profile-picture {
   width: 450px;
   height: 450px;
-  margin-top: 45px;
+  margin-top: 40px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -303,14 +302,8 @@ main {
 .about-text {
     max-width: 650px;
     text-align: left;
+    margin-top: 0;
 }
-/* .about-text h2 {
-    margin-top: -15px;
-    font-size: 30px;
-    color: #d81159;
-    margin-bottom: 24px;
-    text-align: left;
-} */
 .about-text p {
     font-size: 16px;
     line-height: 1.5;
@@ -320,6 +313,7 @@ main {
 .about-btn {
   text-align: left; 
   margin-top: 30px; 
+  margin-bottom: 30px;
 }
 @media (max-width: 1024px) {
     .about-text {
@@ -331,20 +325,18 @@ main {
         flex-direction: column;
         text-align: center;
     }
-
     .profile-picture {
-        margin-top: 10px;
         width: 350px;
         height: 350px;
+    }
+    .about-Me h2 {
+        margin-bottom: 2px;
     }
 
     .about-text {
         max-width: 100%;
         text-align: left;
     }
-    /* .about-text h2{
-        text-align: center;
-    } */
 }
 @media (max-width: 500px) {
     .about-container {
